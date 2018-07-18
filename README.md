@@ -55,3 +55,14 @@ public class StatementNativeRepository {
     }) @Entity class SQLMappingCfgEntity{@Id int id;} // <- walkaround
 }
 ```
+
+--------
+Un autre exemple de mapping de dto : https://smarterco.de/spring-data-jpa-query-result-to-dto/
+
+```java
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+	@Query("SELECT new de.smarterco.example.dto.UserNameDTO(u.id, u.name) FROM User u WHERE u.name = :name")
+    List<UserNameDTO> retrieveUsernameAsDTO(@Param("name") String name);
+}
+```
