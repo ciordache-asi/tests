@@ -1,6 +1,7 @@
 # tests
 tests repo
-```
+
+```java
 @Path("")
 public class ZAJobLauncher {
 	@Autowired
@@ -25,11 +26,12 @@ public class ZAJobLauncher {
 	}
   }
 ```
+
 ---------------------------------------
 
 Exemple @Query mapping to DTO : https://stackoverflow.com/a/36109273
 
-```
+```java
 @Repository
 public class StatementNativeRepository {      
     @PersistenceContext private EntityManager em;
