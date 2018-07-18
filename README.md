@@ -23,3 +23,7 @@ public class ZAJobLauncher {
 				 (new JobParametersBuilder()).addString("listIdenetetesupport",listIdenetetesupport).toJobParameters() );
 	}
   }
+  
+---------------------------------------
+
+Exemple @Query mapping to DTO : https://stackoverflow.com/a/36109273
