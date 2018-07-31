@@ -66,3 +66,13 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<UserNameDTO> retrieveUsernameAsDTO(@Param("name") String name);
 }
 ```
+
+```java
+
+java.io.File dir = new java.io.File("C:\\wrk\\doc\\asi\\clients\\DSIA\\180712-conception\\");
+java.io.FileFilter ff = new org.apache.commons.io.filefilter.WildcardFileFilter("DSIA*int*_v0.0.docx");
+java.io.File[] files = dir.listFiles(ff);
+for(java.io.File f : files) {
+	System.out.println(f.getPath());
+}
+```
